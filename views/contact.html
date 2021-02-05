@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body class="deep-purple lighten-4">
+    <nav>
+      <div class="nav-wrapper deep-purple darken-3">
+        <a href="/" class="brand-logo center">My Web App</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <ul class="sidenav deep-purple lighten-4" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+    </ul>
+
+
+    <div class="row"> 
+        <div class="col s3">
+
+        </div>
+        <div class="col s6">
+            <h2>Contact Us</h2>
+            <p>E. Jacinto Street</p>
+            <p>Davao City</p>
+            <p>Philippines</p>
+            
+            <p><b>We would love to here from you. Message us! By filling the form below.</b></p>
+            
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">Fullname</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="message" type="text" class="validate">
+              <label for="message">Message</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light right deep-purple darken-3" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+        </div>
+      </div>
+
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems);
+        });
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

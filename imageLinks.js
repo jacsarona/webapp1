@@ -1,0 +1,27 @@
+ 
+const weatherLinks = {
+    'Sunny' : 'https://assets.msn.com/bundles/v1/weather/latest/SunnyDayV2.svg', 
+    'Mostly Sunny' : 'https://assets.msn.com/bundles/v1/weather/latest/SunnyDayV2.svg', 
+    'Cloudy' : 'https://assets.msn.com/bundles/v1/weather/latest/CloudyV2.svg',
+    'Snow' : 'https://i.dlpng.com/static/png/6595248_preview.png',
+    'Light Rain' : 'https://assets.msn.com/bundles/v1/weather/latest/LightRainV2.svg',
+    'Rain' : 'https://assets.msn.com/bundles/v1/weather/latest/LightRainV2.svg',
+    'Partly Sunny' : 'https://winaero.com/blog/wp-content/uploads/2019/09/MSN-Weather-icon.png',
+    'Partly Cloudy' : 'https://assets.msn.com/bundles/v1/weather/latest/PartlyCloudyDayV2.svg', 
+    'Clear' : 'https://assets.msn.com/bundles/v1/weather/latest/ClearNightV2.svg',
+    'Mostly Cloudy' : 'https://assets.msn.com/bundles/v1/weather/latest/PartlyCloudyNightV2.svg',
+    'Mostly Clear' : 'https://assets.msn.com/bundles/v1/weather/latest/ClearNightV2.svg',
+    'Rain Snow' : 'https://assets.msn.com/bundles/v1/weather/latest/RainSnowV2.svg',
+    'Hazy Smoke' : 'https://assets.msn.com/bundles/v1/weather/latest/HazySmokeV2.svg ',
+    'Light Snow' : 'https://assets.msn.com/bundles/v1/weather/latest/LightSnowV2.svg',
+    'T-Storms' : 'https://assets.msn.com/bundles/v1/weather/latest/ThunderstormsV2.svg',
+    'Rain Showers' : 'https://assets.msn.com/bundles/v1/weather/latest/RainShowersDayV2.svg',
+    'Rain Showers Night' : 'https://assets.msn.com/bundles/v1/weather/latest/RainShowersNightV2.svg',
+    'Rain and snow showers' : 'https://assets.msn.com/bundles/v1/weather/latest/RainSnowShowersNightV2.svg',
+
+}
+const flag = 'data:image/png;base64,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' 
+ 
+const logo = 'https://images-na.ssl-images-amazon.com/images/I/61nuuPxUvaL.png';
+
+module.exports = {weatherLinks, flag, logo};

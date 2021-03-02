@@ -1,0 +1,34 @@
+{
+  "name": "webapp1",
+  "version": "1.0.0",
+  "description": "A node app project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacsarona/webapp1.git"
+  },
+  "keywords": [
+    "node-app",
+    "webapp",
+    "express",
+    "weather",
+    "ejs",
+    "api"
+  ],
+  "author": "James Angelo Sarona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacsarona/webapp1/issues"
+  },
+  "homepage": "https://github.com/jacsarona/webapp1#readme",
+  "dependencies": {
+    "crypto-random-string": "^3.3.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "weather-js": "^2.0.0"
+  }
+}

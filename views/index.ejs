@@ -1,0 +1,76 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('./constants/header') %> 
+
+  <body class="deep-purple lighten-4">
+
+    <%- include('./constants/navigation') %>  
+    <%console.log(cityWeatherData)%> 
+    <div style="height: 50px">
+
+    </div>
+    <div class="row"> 
+      <div class="col s6 right-align">
+        <img src='<%=imgUrl%>'>
+      </div>
+      <div class="col s6 left-align"> 
+        <h2><%=cityWeatherData['location']['name']%></h2>
+        <h5><%=cityWeatherData['location']['lat']%>°        
+            <%if(cityWeatherData['location']['lat'] > 0){%>
+              N
+            <%}else{%>
+              S
+            <%}%>
+            , 
+            <%=cityWeatherData['location']['long']%>°        
+            <%if(cityWeatherData['location']['long'] > 0){%>
+              E
+            <%}else{%>
+              W
+            <%}%>
+        </h5>  
+      </div>
+       
+    </div>
+    <div style="height: 50px">
+
+    </div> 
+    <div class="row center-align">
+      <div class="col s1"></div>
+      <% for(var i = 0; i < cityWeatherData['forecast'].length; i++){ %>
+
+        <% date = cityWeatherData['forecast'][i]['date'].split("-"); %> 
+         
+        <div class="col s2"> 
+          <img src='<%=weatherIcons[cityWeatherData['forecast'][i]['skytextday']];%>' width="110" height="100">
+           <h3>
+            <%if(cityWeatherData['current']['date'] == cityWeatherData['forecast'][i]['date']){%>
+              Today
+            <%}else{%> 
+              <%=cityWeatherData['forecast'][i]['day'];%>
+            <%}%>
+          </h3>
+          <h4>
+            <%=monthName[date[1]];%>.
+            <%=date[2];%>,
+            <%=date[0];%>
+          </h4>
+          <h5>
+            <%=cityWeatherData['forecast'][i]['low']%>° <%=cityWeatherData['location']['degreetype'];%>
+            
+            <%=cityWeatherData['forecast'][i]['high']%>° <%=cityWeatherData['location']['degreetype'];%>
+          </h5>
+          <h5>
+             <%= cityWeatherData['forecast'][i]['skytextday']; %> 
+          </h5>
+          
+           
+        </div>
+      <% } %>
+      <div class="col s1"></div> 
+    </div>
+ 
+    <%- include('./constants/footer') %> 
+  </body>
+</html>

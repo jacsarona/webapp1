@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./constants/header') %>  
+    <body class="deep-purple lighten-4">
+    <%- include('./constants/navigation') %>    
+ 
+    <%- include('./constants/footer') %>
+        <div class="row" style="margin-top: 5%; margin-right: 24%;">
+            <div class="col s12 right-align">
+                <img style='vertical-align:middle;' src='<%=flag;%>'  width="150" height="100">
+              </div>
+        </div> 
+        <div class="row" style=" margin-left: 25%; margin-right: 25%;">
+            <form action ="/new-user" method="POST">
+                <div class="card deep-purple lighten-5">
+                    <div class="card-content white-text">
+                        <span class="card-title black-text">
+                            <a href="/detail" > 
+                                <i class="material-icons left">arrow_back</i>
+                            </a> 
+                            <%=heading %>
+                        </span>
+                        
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="name" name="name" type="text"
+                                    <% if(heading == 'User Information'){ %>
+                                        readonly
+                                        value='<%=fname;%>' 
+                                    <% }else{ %>
+                                        class="validate" 
+                                        required
+                                    <% } %> 
+                                >
+                                <label for="name">Fullname</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="date" name="date" type="date" 
+                                    <% if(heading == 'User Information'){ %>
+                                        readonly
+                                        value='<%=bdate;%>' 
+                                    <% }else{ %>
+                                        class="validate" 
+                                        required
+                                    <% } %>  
+                                >       
+                                <label for="date">Birthdate</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="nationality" name="nationality" type="text" readonly
+                                    <% if(heading == 'User Information'){ %>
+                                        value='<%=nat; %>'
+                                    <% }else{ %>
+                                        value='<%=nationality;%>'
+                                        class="validate" 
+                                        required
+                                    <% } %>
+                                >
+                                <label for="nationality">Nationality</label>
+                            </div>
+                        </div>    
+                    </div>
+                    <% if(heading != 'User Information'){ %> 
+                    <div class="card-action"> 
+                        <a href="#"> 
+                            <button class="btn waves-effect waves-light right deep-purple darken-3" type="submit" name="action">Save
+                                <i class="material-icons right">save</i>
+                            </button>
+                        </a>
+                    </div>
+                    <% } %> 
+                    <br>
+                </div> 
+            </form>
+        </div> 
+    </body>
+</html>

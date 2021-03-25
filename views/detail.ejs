@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./constants/header') %>  
+    <body class="deep-purple lighten-4">
+    <%- include('./constants/navigation') %>   
+    <div style="height: 50px">
+    </div>
+
+    <div class="row"> 
+      <div class="col s6 right-align">
+        <img style='vertical-align:middle;' src='<%=flag;%>'  width="250" height="150">
+      </div>
+      <div class="col s6 left-align"> 
+        <h3><%=date%></h3>
+        <h5><%=time%></h5>  
+      </div>  
+    </div>
+    
+    <div class="row">
+      <div class="col s12 right-align" > 
+        <a href="/user-add" class="btn waves-effect waves-light blue darken-1" type="submit" name="action">New
+          <i class="material-icons right">add</i>
+        </a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col s12 center-align" >
+        <table class="highlight">
+          <thead class="deep-purple white-text">
+            <tr>
+                <th>#</th>
+                <th>Person Name</th>
+                <th>Birthdate</th>
+                <th>Nationality</th>
+                <th>Actions</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <% var i = 1;%> 
+            <% if(users.length != 0){ %> 
+              <% for(user of users){ %>
+                <form action ="/user-view" method="POST">
+                  <tr>
+                    <td hidden>
+                      <input type="text" id="userId" name="userId" value="<%=user._id %>" readonly>
+                    </td>
+                    <td><%=i++ %></td>
+                    <td><%=user.fullname %></td>
+                    <td><%=user.birthDate %></td>
+                    <td><%=user.nationality %></td>
+                    <td style="width: 10%;">
+                      <a href="#"> 
+                        <button class="btn btn-warning" type="submit" name="action">View</button>
+                      </a>
+                    </td>
+                  </tr>
+                </form>
+              <% } %>
+            <% }else{ %>
+              <td align="center" colspan="5" style="color: red;text-align: center;"> No Records
+            <% } %>  
+            </td>
+          </tbody>
+        </table>
+      </div>  
+    </div>
+    
+    <%- include('./constants/footer') %> 
+    </body>
+</html>

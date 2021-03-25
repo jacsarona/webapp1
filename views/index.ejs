@@ -1,0 +1,81 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('./constants/header') %>  
+  <body class="deep-purple lighten-4">
+    
+    <div id="page-container">
+      <div id="content-wrap">
+        <div class="row"> 
+          <div class="col s12 center-align" style="margin-bottom: 2%;">
+            <div style="height: 50px;"></div> 
+            <ul id="myHeading">
+              <li>
+                <img style='vertical-align:middle;' src='<%=logo;%>'  width="100" height="100">
+              </li>
+              <li>
+                <div style='vertical-align:middle; display:inline;'>
+                  <h1 style="display:inline;"><%=heading %></h1>
+                </div>    
+              </li> 
+            </ul>   
+            <div style="height: 15px;"></div> 
+            <ul id="MysiteLinks">  
+              <a href="<%=sites.facebook%>" target="_blank">
+                <i class="fa fa-facebook-square" style="font-size:50px;color: black; padding-left: 30px;">
+                </i> 
+              </a> 
+              <a href="<%=sites.twitter%>" target="_blank">
+                <i class="fa fa-twitter-square" style="font-size:50px;color: black; padding-left: 30px;">
+                </i> 
+              </a> 
+              <a href="<%=sites.linkin%>" target="_blank">
+                <i class="fa fa-linkedin-square" style="font-size:50px;color: black; padding-left: 30px;">
+                </i> 
+              </a> 
+              <a href="<%=sites.github%>" target="_blank">
+                <i class="fa fa-github-square" style="font-size:50px;color: black; padding-left: 30px;">
+                </i> 
+              </a>  
+            </ul> 
+            
+          </div>
+          
+          <div style="margin:0 auto" align=center>
+            <form action ="/detail" method="POST"> 
+              <div class="row">
+                <div class="col s12"> 
+                  <div class="input-field inline">
+                    <select name='timezone' class="browser-default deep-purple lighten-4" style="width: 200px; font-size: 20px; border-color: #4527a0;">
+                      <option value="" disabled selected>Time Zone</option>
+                      <option value="America/New_York">America</option>
+                      <option value="Asia/Tokyo">China</option>
+                      <option value="Asia/Manila">Philippines</option>
+                      <option value="Europe/Moscow">Russia</option>
+                      <option value="Europe/Stockholm">Sweden</option>
+                    </select>
+                  </div>
+                  <button class="btn waves-effect waves-light deep-purple darken-3" type="submit" name="join" style="height: 43px; margin-left: 5px;">Join
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div> 
+        </div>
+      </div>
+
+      <footer class="page-footer deep-purple lighten-4" id="footer">
+
+        <div class="footer-copyright black-text">
+          <div class="container">
+          © 2014 Copyright Text | Powered By: The Dark People
+          <a class="grey-text text-lighten-4 right" href="#!"><span class="black-text">jacsarona@addu.edu.ph</span></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+     <%- include('./constants/footer') %> 
+  </body>
+</html>

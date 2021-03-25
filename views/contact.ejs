@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./constants/header') %> 
+
+  <body class="deep-purple lighten-4">
+    <%- include('./constants/navigation') %> 
+
+    <div class="row"> 
+      <div class="col s3">
+
+      </div>
+      <div class="col s6">
+          <h2><%=heading %></h2>
+          <p>E. Jacinto Street</p>
+          <p>Davao City</p>
+          <p>Philippines</p>
+          
+          <p><b>We would love to here from you. Message us! By filling the form below.</b></p>
+          
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" name="name" type="text" class="validate" required>
+            <label for="name">Fullname</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" type="email" class="validate" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" required></textarea>
+            <label for="textarea1">Message</label>
+          </div>
+        </div>
+        <a href="/" class="btn waves-effect waves-light right deep-purple darken-3" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </a>
+      </div>
+    </div>
+
+    <%- include('./constants/footer') %> 
+  </body>
+</html>
